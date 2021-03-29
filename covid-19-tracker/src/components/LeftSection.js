@@ -10,7 +10,7 @@ import "leaflet/dist/leaflet.css";
 
 function LeftSection() {
   const dispatch = useDispatch()
-  const {countries, all, country, center, zoom} = useSelector((state) => state.covid)
+  const { countries, all, country, center, zoom} = useSelector((state) => state.covid)
   
   
   const changeCountryInformation = (e) => {
@@ -87,7 +87,6 @@ function LeftSection() {
         <Map 
         center={center}
         zoom={zoom}
-        countries={countries} 
          />
       </StyledMap>
    
@@ -96,6 +95,7 @@ function LeftSection() {
 }
 
 const StyledLeftSection = styled.div`
+  flex-basis: 75%;
    .nav{
      display: flex;
      justify-content: space-between;

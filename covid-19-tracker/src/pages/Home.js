@@ -28,6 +28,10 @@ const StyledHome = styled.div`
    width: 100%;
    padding: 2rem 5rem;
    background-color: #eeeeee;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   
 `
 
 export default Home;

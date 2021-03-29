@@ -6,7 +6,11 @@ import { MapContainer, TileLayer } from 'react-leaflet'
 import { useSelector } from "react-redux"
 
 
-function Map({countries, center, zoom}) {
+function Map({center, zoom}) {
+
+  const { countries, caseType } = useSelector((state) => state.covid)
+
+
   const casesTypeColors = {
     cases: {
         hex: "#0b1bf5",
@@ -23,7 +27,7 @@ function Map({countries, center, zoom}) {
 }
 
   
-  const { caseType } = useSelector((state) => state.covid)
+ 
   console.log(caseType)
   return (
     <StyledMap>

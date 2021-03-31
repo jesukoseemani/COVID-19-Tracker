@@ -21,6 +21,17 @@ align-items: center;
 margin-left: 1.5rem;
 background-color: #fafafa;
 padding: 0rem 1rem;
+@media (max-width: 1071px){
+  height: 1140px;
+     }
+   @media (max-width: 900px){
+       margin-top: 3rem; 
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: flex-start; 
+       height: 440px;
+    }
 `
 
 export default RightSection;

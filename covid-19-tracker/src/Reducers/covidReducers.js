@@ -4,7 +4,7 @@ const initState = {
   historical: {},
   country: {},
   center: [34.80746, -40.4796],
-  zoom: 2,
+  zoom: 3,
   caseType: "cases"
 }
 
@@ -22,20 +22,18 @@ const covidReducers = (state= initState, action) => {
     case "FETCH_COUNTRY":
       return{
         ...state,
-        country: action.payload.country
+        country: action.payload.country,
+        center: action.payload.center,
+        zoom: action.payload.zoom
       };
       case "CLEAR_COUNTRY":
         return{
         ...state,
-        country: {}
+        country: action.payload.country ,
+        center: action.payload.center,
+        zoom: action.payload.zoom
         };
-        case "CENTER_ZOOM":
-          return{
-          ...state,
-          center: action.payload.center,
-          zoom: action.payload.zoom
-          };
-          case "CASE_TYPE":
+      case "CASE_TYPE":
           return{
           ...state,
           caseType: action.payload.caseType,

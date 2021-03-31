@@ -14,8 +14,10 @@ export const showDataOnMap = (data, caseType, casesTypeColors) =>
         <Circle 
             center={[country.countryInfo.lat, country.countryInfo.long]}
             fillOpacity={0.4}
-            color={casesTypeColors[caseType].hex}
-            fillColor={casesTypeColors[caseType].hex}
+            pathOptions={{
+                color: casesTypeColors[caseType].hex,
+                fillColor: casesTypeColors[caseType].hex
+            }}
             radius={Math.sqrt(country[caseType]) * casesTypeColors[caseType].multiplier}
             key={country.country}
             
@@ -46,3 +48,5 @@ export const sortData = (data) => {
   
   export const prettyPrintStat = (stat) => 
   stat ? `+${numeral(stat).format("0.0a")}` : "+0";
+
+ 

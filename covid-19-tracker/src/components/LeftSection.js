@@ -17,22 +17,15 @@ function LeftSection() {
    const targeted = e.target.value;
    console.log(targeted)
    if(targeted === "worldwide"){
-    dispatch({type: "CLEAR_COUNTRY"});
-    dispatch({type: "CENTER_ZOOM",
+    dispatch({type: "CLEAR_COUNTRY",
               payload: {
+                country: {},
                 center: [34.80746, -40.4796],
-                zoom: 2
+                zoom: 3
               }
-  });
-    
+  }); 
    }else{
      dispatch(loadCountry(targeted));
-  //    dispatch({type: "CENTER_ZOOM",
-  //             payload: {
-  //               center: [country.countryInfo.lat, country.countryInfo.long],
-  //               zoom: 4
-  //             }
-  // });
    }
   }
 
@@ -57,7 +50,7 @@ function LeftSection() {
     
        { country.countryInfo ? 
          <Box 
-         Cases="Coronavirus cases"
+         Cases="Covid-19 cases"
          todayCases={prettyPrintStat(country.todayCases)}
          cases={prettyPrintStat(country.cases)}
          Recovered="Recovered"
@@ -70,7 +63,7 @@ function LeftSection() {
          />
        :
        <Box 
-       Cases="Coronavirus cases"
+       Cases="Covid-19 cases"
        todayCases={prettyPrintStat(all.todayCases)}
        cases={prettyPrintStat(all.cases)}
        Recovered="Recovered"
@@ -96,15 +89,33 @@ function LeftSection() {
 
 const StyledLeftSection = styled.div`
   flex-basis: 75%;
+  @media (max-width: 900px){
+    width: 100%;
+    
+     }
    .nav{
      display: flex;
      justify-content: space-between;
      align-items: center;
+     @media (max-width: 1071px){
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+     }
+     @media (max-width: 900px){
+      flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     
+   }
 
     .nav__heading{
       h1{
         color: red;
         font-weight: bold;
+        @media (max-width: 700px){
+          font-size: 2.2rem;  
+   }
       }
     }
 
@@ -125,6 +136,13 @@ const StyledLeftSection = styled.div`
          padding-right: 0.3rem;
          font-size: 1.3rem;
          font-weight: 700;
+         @media (max-width: 700px){
+          font-size: 1rem;
+          padding-left: 0.2rem;
+         padding-right: 0.1rem;
+         width: 7rem;
+
+            }
        }
      }
    }

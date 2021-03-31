@@ -32,8 +32,9 @@ export const loadCountry = (country) => async (dispatch) => {
     type: "FETCH_COUNTRY",
     payload: {
       country: countryData.data,
-      
-    },
+      center: [countryData.data.countryInfo.lat, countryData.data.countryInfo.long],
+      zoom: 6
+       },
   });
 
 }

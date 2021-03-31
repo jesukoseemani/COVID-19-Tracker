@@ -61,6 +61,23 @@ const StyledBoxes = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
+  @media (max-width: 1071px){
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        margin-top:2rem;     
+     }
+  @media (max-width: 900px){
+      flex-direction: row;
+     justify-content: space-between;
+     align-items: center;  
+   }
+   @media (max-width: 700px){
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        margin-top:2rem;   
+   }
   .box{
     flex: 1;
     display: flex;
@@ -71,16 +88,39 @@ const StyledBoxes = styled.div`
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
     margin: 0rem .5rem;
     cursor: pointer;
+    width: 10rem;
+    height: 10rem;
     background-color: white;
+    @media (max-width: 1071px){
+        margin-top:2rem; 
+        width: 15rem;
+        height: 15rem;  
+        align-items: center;  
+     }
+     @media (max-width: 900px){
+     
+        width: 10rem;
+        height: 10rem; 
+    }
+    @media (max-width: 700px){
+        width: 100%;
+        height: 100%;  
+   }
+  
     h4{
       font-size: 1.3rem;
       padding-top: 1rem;
-      
     }
     p{
       font-size: 1.8rem;
       padding-top: .7rem;
       color: red;
+      @media (max-width: 900px){
+        
+      padding-top: .6rem;
+      padding-bottom: .6rem;
+     
+    }
     }
     .green{
       color: green;
@@ -90,6 +130,7 @@ const StyledBoxes = styled.div`
       padding-top: .5rem;
       padding-bottom: .7rem;
       font-weight: lighter;
+    
     }
   }
 `

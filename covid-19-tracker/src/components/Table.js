@@ -14,14 +14,14 @@ function Table() {
     <StyledTable>
       <h4>COVID-19 CASES BY COUNTRY</h4>
       <table className="table">
-       
+       <tbody>
        {tabularCountries.map((country) => 
-       <tr className="table_row">
+       <tr key={country.country} className="table_row">
        <td>{country.country}</td>
        <td>{numeral(country.cases).format("0,0")}</td>
        </tr>
        )}
-       
+       </tbody>
       </table>
     </StyledTable>
   );
@@ -29,10 +29,16 @@ function Table() {
 
 const StyledTable = styled.div`
  width: 100%;
- height: 60vh;
+ height: 435px;
  overflow: scroll;
  display: flex;
  flex-direction:column;
+ @media (max-width: 1071px){
+  height: 800px;
+     }
+ @media (max-width: 900px){
+       margin-right: 2rem;
+    }
 
  &::-webkit-scrollbar{
             width: 0.5rem;

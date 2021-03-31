@@ -31,6 +31,11 @@ const StyledHome = styled.div`
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   @media (max-width: 900px){
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
    
 `
 

@@ -2,9 +2,9 @@
 
 ###[LIVE SITE](https://covid-19-tracker-1a338.web.app)
 
-##![covid-19-tracker](https://imgdb.net/177)
+##![covid-19-tracker](https://i.postimg.cc/3wBJcPP3/covid.png)
 
-##Introduction
+##Introduction <br/>
 With the situation around the world. Every individual wants to be carried along about the present situation which is the virus that is rapidly spread across the world.
 <br/><br/>
 I created a webapp where users can get the latest update about the virus. The app shows the recovery rate to death rate and shows the total cases of the people infected, providing a map and a chart for better use.<br/><br/>

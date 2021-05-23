@@ -32,6 +32,9 @@ padding: 0rem 1rem;
        align-items: flex-start; 
        height: 440px;
     }
+    @media (max-width: 700px){
+      margin-left: 0rem;
+    }
 `
 
 export default RightSection;

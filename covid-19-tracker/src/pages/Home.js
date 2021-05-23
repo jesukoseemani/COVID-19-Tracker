@@ -36,6 +36,9 @@ const StyledHome = styled.div`
      justify-content: center;
      align-items: center;
    }
+   @media (max-width: 700px){
+    padding: 2rem 1rem;
+   }
    
 `
 

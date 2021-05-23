@@ -39,6 +39,10 @@ const StyledTable = styled.div`
  @media (max-width: 900px){
        margin-right: 2rem;
     }
+    @media (max-width: 500px){
+       margin-right: 3rem;
+       
+    }
 
  &::-webkit-scrollbar{
             width: 0.5rem;
